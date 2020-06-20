@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <h1 id= "demo"></h1> 
+  <script>
+    "use strict"
+    let celsius = +prompt("Input temperature in celsius:");
+    let fahrenheit = (9/5) * celsius + 35;
+    document.getElementById("demo").innerHTML = `temperature in fahrenheit ${fahrenheit}`;
+    alert(`temperature in fahrenheit ${fahrenheit}`);
+    //console.log(`temperature in fahrenheit ${fahrenheit}`);
+    //document.write(`temperature in fahrenheit ${fahrenheit}`);
+  </script>
+</body>
+</html>
