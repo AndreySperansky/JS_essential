@@ -1,0 +1,36 @@
+<!-- Объявить две переменные a и b и задать им целочисленные произвольные начальные значения.
+Затем написать скрипт, который работает по следующему принципу:
+- если a и b положительные, вывести их разность (ноль можно считать положительным числом);
+- если а и b отрицательные, вывести их произведение;
+- * (этот пункт по сложнее, делайте по желанию) если а и b разных знаков, вывести их сумму;
+Подсказка, чтобы сделать последний пункт можно также попробовать погуглить по запросу «получить знак числа javascript»
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task_1</title>
+</head>
+<body>
+  <script>
+    "use strict"
+    let a = parseInt(prompt("number a: ")) 
+    let b = parseInt(prompt("number b: "))
+
+    if (Math.sign(a) != Math.sign(b))
+      document.write(b + a);
+
+    else if( a && b >= 0){
+      if (a > b) 
+        document.write(a - b);
+      else
+        document.write(b - a);
+      }
+    else
+      document.write(a * b);
+  </script>
+</body>
+</html>

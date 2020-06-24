@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task_6</title>
+</head>
+<body>
+  <script>
+    "use script"
+    let money = prompt("Введите сумму денег: ");
+    let digitQuantaty = money.length;
+    let lastDigit = money.charAt(digitQuantaty-1);  // последняя цифра суммы денег
+    let prevDigit = money.charAt(digitQuantaty-2);  // препоследняя цифра суммы денег
+
+    if (prevDigit == '1')
+      document.write(`${money} рублей`);
+    else{
+      switch (lastDigit){
+        case '1':
+          document.write(`${money} рубль`)
+          break;
+        case ('2'):
+          document.write(`${money} рубля`)
+          break;
+        case ('3'):
+          document.write(`${money} рубля`)
+          break;
+        case ('4'):
+          document.write(`${money} рубля`)
+          break;
+        default:
+          document.write(`${money} рублей`)
+          break;
+      }
+    }
+      
+
+  </script>
+</body>
+</html>
