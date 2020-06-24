@@ -1,0 +1,64 @@
+<!-- Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+переданного значения операции (использовать switch) выполнить одну из арифметических
+операций
+(использовать функции из задания 4) и вернуть полученное значение. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+
+    function summ(x,y)
+    {
+      return (x + y);
+    }
+
+    function subtruct(x,y)
+    {
+      return (x - y);
+    }
+
+    function divide(x,y)
+    {
+      return (x / y);
+    }
+
+    function mult(x,y)
+    {
+      return (x * y);
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+      let result = 0;
+      switch (operation){
+        case "+":
+          result = summ(arg1, arg2);
+          break;
+        case "-":
+          result = subtruct(arg1, arg2);
+          break;
+        case "/":
+          result = divide(arg1, arg2);
+          break;
+        case "*":
+          result = mult(arg1, arg2);
+          break;
+      }
+      return result;
+    }
+    let a = +prompt("a: ");
+    let b = +prompt("b: ");
+    let o = prompt("operation: ");
+
+    let res = document.write(mathOperation(a, b, o));
+
+  </script>
+</body>
+</html>
