@@ -1,0 +1,54 @@
+<!-- 
+  5. Перед вами находится массив с продуктами в интернет-магазине. Вам нужно:
+  1. Получить все товары, у которых есть фотографии, можете использовать метод filter https://mzl.la/2qROQkT
+  2. Отсортируйте товары по цене (от низкой цены к высокой), можете использовать метод sort
+https://mzl.la/2Y79hbZ , как устроен sort можно посмотреть например здесь https://youtu.be/O2pusOp0gC0
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict"
+    const products = [{
+        id: 3,
+        price: 127,
+        photos: [
+          "1.jpg",
+          "2.jpg",
+        ]
+      },
+      {
+        id: 5,
+        price: 499,
+        photos: []
+      },
+      {
+        id: 10,
+        price: 26,
+        photos: [
+          "3.jpg"
+        ]
+      },
+      {
+        id: 8,
+        price: 78,
+      },
+    ];
+
+    //const productsHavingImg = products.filter(element => "photos" in element && element.photos.length > 0);
+    const productsHavingImg = products.filter(function(element) {return "photos" in element && element.photos.length > 0})
+    console.log(productsHavingImg);
+
+    const productsSorted = products.sort(function(item1, item2) {return item1.price - item2.price;});
+    console.log(productsSorted)
+  </script>
+</body>
+
+</html>
