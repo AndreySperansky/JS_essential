@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>es5</title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+
+    function Product(name, price) {
+      this.name = name;
+      this.price = price;
+    }
+
+    Product.prototype.makeDiscount = function () {
+      this.price = this.price - (this.price * 25 / 100);
+    };
+
+    const product1 = new Product('Товар_1', 150);
+    product1.makeDiscount();
+
+    console.log(product1);
+  </script>
+</body>
+
+</html>
