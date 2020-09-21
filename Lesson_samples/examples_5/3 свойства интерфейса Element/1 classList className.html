@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .warning {
+            color: orange;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn-large">
+        btn
+    </button>
+
+    <script>
+        "use strict";
+        
+        let button = document.querySelector('button');
+        console.log(button.classList);
+        console.log(button.className);
+
+        button.classList.add('warning');                // добавление класса
+        button.classList.remove('btn');                 // удаление класса
+        button.classList.toggle('hello');               // удаление если есть, добавление если нет
+        if (button.classList.contains('btn-large')) {   // проверка на наличие класса
+            alert('класс btn-large есть у элемента')
+        }
+        
+    </script>
+</body>
+</html>

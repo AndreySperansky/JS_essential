@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+   </div>
+    <script>
+        
+        "use strict";
+        let paragraph = document.createElement('p');
+        let div = document.querySelector('div');
+        div.appendChild(paragraph);
+        paragraph.innerText = "hello world";
+        
+        
+        //Добавляет элемент в конец списка дочерних элементов родителя.
+        let paragraph1 = document.createElement('p');
+        document.body.appendChild(paragraph1);
+        paragraph1.innerText = "hello world";
+        
+    </script>
+</body>
+</html>

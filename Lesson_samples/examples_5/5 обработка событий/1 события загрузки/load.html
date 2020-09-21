@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://placeimg.com/6400/4800/nature" alt="">
+
+    <script>
+        "use strict";
+        // событие срабатывает когда загружены все тэги но ресурсы или скрипты продолжают загружаться 
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('html загружен, возможно не загружены картинки или стили');
+        });
+
+        // событие срабатывает когда загружен весь контент
+        //window.addEventListener('load', function () {
+        //    console.log('все загружено');
+        //});
+        
+        function handler(event) {
+            console.log(event);
+        }
+        
+        window.addEventListener('load', handler);
+    </script>
+</body>
+
+</html>

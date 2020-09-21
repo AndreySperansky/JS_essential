@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Кнопка 1</button>
+    <button class="btn">Кнопка 2</button>
+    <button class="btn">Кнопка 3</button>
+    <button class="btn">Кнопка 4</button>
+    <script>
+        'use strict';
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(function(button) {
+            // button.addEventListener('click', function(event) {
+
+            // });
+            button.addEventListener('click', buttonClickHandler);
+        });
+
+        /**
+         * @param {MouseEvent} event
+         */
+        function buttonClickHandler(event) {
+            console.log(event);//объект с информацией о событии
+            console.log(event.target);//элемент на котором произошло событие
+            console.log(event.target.textContent);//текст в элементе
+            console.log(event.target.classList);//список классов
+        }
+    </script>
+</body>
+</html>

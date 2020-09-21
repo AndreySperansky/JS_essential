@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Итерирование по объекту с помощью for in</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let someObj = {
+            num1: 1,
+            num2: 2,
+            num3: 3,
+        };
+        
+        for (let property in someObj) {
+            console.log(property); 
+        }  
+
+        /* в выводе окажутся имена свойств объекта:
+        num1
+        num2
+        num3
+        */
+
+        /* не используйте цикл for in для итерации по массиву, подробнее
+        здесь https://mzl.la/2Dw0NEr */
+    </script>
+</body>
+</html>

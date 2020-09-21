@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+
+        <button class = "btn">другая кнопка1</button>
+        <button class = "btn">другая кнопка2</button>
+    </div>
+
+    <script>
+        "use strict";
+
+        function createButton(textOnButton) {
+            return `<button class="one">${textOnButton}</button>`;
+        }
+
+        const divEl = document.querySelector('div');
+
+        for (let i = 0; i <= 5; i++) {
+            let button = createButton(`Кнопка №${i}`);
+            divEl.insertAdjacentHTML("afterbegin", button);
+        }
+
+//        divEl.addEventListener('click', function(event) {
+//            let target = event.target;
+//            if (target.tagName === 'BUTTON' && target.classList.contains('one')) {
+//                alert(target.innerText);
+//            }
+//        }
+//        );
+        
+        
+        const buttons = document.querySelectorAll('button');         // Это коллекция поэтому перебераем циклом
+        buttons.forEach(function(button){
+            button.addEventListener('clic', buttonClickHandler);
+        })
+        
+        
+        function buttonClickHandler(event) {
+            console.log(event);         //объект с информацией о событии
+            console.log(event.target);      // элемент на котором произошло событие
+            console.log(event.target.textContent);      // текст в элементе
+            console.log(event.target.classList);        // список классов
+       }
+        
+    </script>
+
+</body>
+
+</html>
